@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>447 Mail Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="container">
+  <h1>447 Mail</h1>
+
+  <div id="not-logged-in">
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+    <button id="login-button">Login</button>
+    <p>Don't have an account? Go to <a href="https://cs447-mail.web.app" target="_blank">477 Mail Web</a></p>
+  </div>
+
+  <div id="logged-in" style="display:none;">
+    <p>Logged in as <span id="user-email"></span></p>
+    <p>Restore Private Key:</p>
+    <input type="file" id="privateKeyFile" />
+    <button id="restorePrivateKeyBtn">Restore Private Key</button>
+    <button id="logout">Logout</button>
+  </div>
+
+  <p id="status"></p>
+</div>
+<script type="module" src="dist/popup.bundle.js"></script>
+</body>
+</html>
